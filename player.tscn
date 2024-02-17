@@ -72,7 +72,7 @@ animations = [{
 size = Vector2(29, 39)
 
 [node name="Player" type="Area2D"]
-position = Vector2(-1, -18)
+position = Vector2(0, -15)
 script = ExtResource("1_1a8id")
 metadata/_edit_group_ = true
 
@@ -81,7 +81,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g1quj")
 animation = &"run"
 autoplay = "run"
-frame_progress = 0.482996
+frame_progress = 0.0642123
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 11.5)
