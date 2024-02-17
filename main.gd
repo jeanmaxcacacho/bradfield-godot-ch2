@@ -13,7 +13,6 @@ func _ready():
 	screensize = get_viewport().get_visible_rect().size
 	$Player.screensize = screensize
 	$Player.hide()
-	new_game()
 	
 	
 func _process(_delta):
@@ -31,6 +30,8 @@ func new_game():
 	$Player.show()
 	$GameTimer.start()
 	spawn_coins()
+	$HUD.update_score(score)
+	$HUD.update_timer(time_left)
 	
 	
 func spawn_coins():
@@ -58,4 +59,12 @@ func _on_player_hurt():
 	
 
 func game_over():
-	pass
+	playing = false
+	$GameTimer.stop()
+	get_tree().call_group("coins", "queue_free")
+	$HUD.show_game_over()
+	$Player.die()
+
+
+func _on_hud_start_game():
+	new_game()
