@@ -40,3 +40,22 @@ func spawn_coins():
 		c.screensize = screensize
 		c.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
 
+
+func _on_game_timer_timeout():
+	time_left -= 1
+	$HUD.update_timer(time_left)
+	if time_left <= 0:
+		game_over()
+
+
+func _on_player_pickup():
+	score += 1
+	$HUD.update_score(score)
+
+
+func _on_player_hurt():
+	game_over()
+	
+
+func game_over():
+	pass

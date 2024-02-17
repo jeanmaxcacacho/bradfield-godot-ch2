@@ -18,3 +18,17 @@ func show_message(text):
 
 func _on_timer_timeout():
 	$Message.hide()
+
+
+func _on_start_button_pressed():
+	$StartButton.hide()
+	$Message.hide()
+	start_game.emit()
+
+
+func show_game_over():
+	show_message("game over nigga")
+	await $Timer.timeout
+	$StartButton.show()
+	$Message.text = "Coin Dash!!!! aexseds"
+	$Message.show()
