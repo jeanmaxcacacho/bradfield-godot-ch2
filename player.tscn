@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://bdl57xrcmafij"]
+[gd_scene load_steps=16 format=3 uid="uid://bdl57xrcmafij"]
 
+[ext_resource type="Script" path="res://player.gd" id="1_1a8id"]
 [ext_resource type="Texture2D" uid="uid://2j8t68xvpke7" path="res://coin_dash_assets/assets/player/hurt/player-hurt-1.png" id="1_o667r"]
 [ext_resource type="Texture2D" uid="uid://dv28mgc4r8gmx" path="res://coin_dash_assets/assets/player/hurt/player-hurt-2.png" id="2_k25rq"]
 [ext_resource type="Texture2D" uid="uid://cw1i845jpjpne" path="res://coin_dash_assets/assets/player/idle/player-idle-1.png" id="3_wixvh"]
@@ -72,6 +73,7 @@ size = Vector2(29, 39)
 
 [node name="Player" type="Area2D"]
 position = Vector2(-1, -18)
+script = ExtResource("1_1a8id")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -79,7 +81,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g1quj")
 animation = &"idle"
 autoplay = "hurt"
-frame_progress = 0.492267
+frame_progress = 0.115253
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 11.5)
