@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://rnyukp3auq0x"]
+[gd_scene load_steps=2 format=3 uid="uid://rnyukp3auq0x"]
+
+[ext_resource type="PackedScene" uid="uid://bdl57xrcmafij" path="res://player.tscn" id="1_ovmq1"]
 
 [node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_ovmq1")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="."]
