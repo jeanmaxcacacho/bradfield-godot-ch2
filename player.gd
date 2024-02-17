@@ -13,4 +13,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # things that should happen in the game loop
 func _process(delta):
-	pass
+	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	position += velocity * speed * delta # when the fuck was this variable initialized???????
