@@ -1,14 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://rnyukp3auq0x"]
+[gd_scene load_steps=7 format=3 uid="uid://rnyukp3auq0x"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_hvak6"]
 [ext_resource type="PackedScene" uid="uid://bdl57xrcmafij" path="res://player.tscn" id="1_ovmq1"]
 [ext_resource type="Texture2D" uid="uid://bew5402p86qxh" path="res://coin_dash_assets/assets/grass.png" id="2_ijvou"]
 [ext_resource type="PackedScene" uid="uid://by3epovp87m1t" path="res://coin.tscn" id="2_lh7db"]
+[ext_resource type="PackedScene" uid="uid://niph3gq3h5dr" path="res://cack2s.tscn" id="3_6srie"]
 [ext_resource type="PackedScene" uid="uid://bo3g4so1them" path="res://hud.tscn" id="5_1aebk"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_hvak6")
 coin_scene = ExtResource("2_lh7db")
+cack2s_scene = ExtResource("3_6srie")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
