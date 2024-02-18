@@ -74,6 +74,7 @@ func game_over():
 	playing = false
 	$GameTimer.stop()
 	get_tree().call_group("coins", "queue_free")
+	get_tree().call_group("obstacles", "queue_free")
 	$HUD.show_game_over()
 	$Player.die()
 
