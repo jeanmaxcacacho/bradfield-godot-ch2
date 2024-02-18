@@ -1,6 +1,7 @@
 extends Node
 
 @export var coin_scene : PackedScene # what does this do?
+@export var cack2s_scene : PackedScene
 @export var playtime = 30
 
 var level = 1
@@ -30,6 +31,7 @@ func new_game():
 	$Player.show()
 	$GameTimer.start()
 	spawn_coins()
+	spawn_cack2s()
 	$HUD.update_score(score)
 	$HUD.update_timer(time_left)
 	
@@ -40,6 +42,16 @@ func spawn_coins():
 		add_child(c)
 		c.screensize = screensize
 		c.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
+		
+		
+func spawn_cack2s():
+	var i = 0
+	while i < 2:
+		var cack2s = cack2s_scene.instantiate()
+		add_child(cack2s)
+		cack2s.screensize = screensize
+		cack2s.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
+		i += 1
 
 
 func _on_game_timer_timeout():
